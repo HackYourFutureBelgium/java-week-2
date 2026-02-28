@@ -14,7 +14,7 @@ public class ExampleVar {
         System.out.println("year type: " + ((Object) year).getClass().getSimpleName());
         System.out.println("isReady type: " + ((Object) isReady).getClass().getSimpleName());
 
-        // var still has a fixed type.
+        // var still has a fixed type. This type cannot be changed afterwards
         var numbers = java.util.List.of(1, 2, 3);
         System.out.println("numbers size: " + numbers.size());
 
