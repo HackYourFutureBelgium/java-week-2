@@ -1,14 +1,9 @@
 package classes.examples.polymorphism;
 
-public class Rectangle extends Shape {
+public class Rectangle extends Figure {
 
     public void draw() {
         System.out.println("Rectangle is the latest");
-    }
-
-    @Override
-    public void sketch() {
-
     }
 
     public void rectangleSpecific() {

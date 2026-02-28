@@ -1,4 +1,4 @@
-package classes.examples;
+package classes.examples.polymorphism;
 
 public class SubCircle extends Circle {
 

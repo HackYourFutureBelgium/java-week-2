@@ -1,6 +1,4 @@
-package classes.examples;
-
-import classes.examples.polymorphism.Square;
+package classes.examples.polymorphism;
 
 /**
  * Example 4: Abstract, Final, and Inner Classes
@@ -12,15 +10,15 @@ public class Example4Polymorphism
 
     public static void main(String[] args)
     {
-        Shape a = new Circle();     //referance type is Shape
-        Shape b = new Square();     //The real object's type is Square /or actual type)
+        Figure a = new Circle();     //referance type is Shape
+        Figure b = new Square();     //The real object's type is Square /or actual type)
         a.draw();                   //how it will behave will be decided on runtime (when we are running)
         b.draw();
         Circle c = new Circle();    //also possible
 
         //Polymorphism is when the same method call behaves differently depending on the actual type of the object.
 
-//      Shape s = new Shape(); //shape is abstract, cannot be instantiated
+//      Figure f = new Figure(); //figure is abstract, cannot be instantiated
 
         Utility u = new Utility();
         u.printMessage();
@@ -57,7 +55,7 @@ public class Example4Polymorphism
     }
 }
 
-class Circle extends Shape
+class Circle extends Figure
 {
     public int radius;
     public final double PI = 3.14;
@@ -72,7 +70,7 @@ class Circle extends Shape
     }
 }
 
-class Oval extends Circle {
+class Sphere extends Circle {   //note: bad example, Sphere is not a Circle!
     /* final methods cannot be overriden!
     public double area() {
         return 0.0;

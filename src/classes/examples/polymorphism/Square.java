@@ -1,10 +1,10 @@
 package classes.examples.polymorphism;
 
-import classes.examples.Shape;
 
-public class Square extends Shape {
+public class Square extends Figure {
 
     public void draw() {
         System.out.println("I am a Square");
     }
+
 }

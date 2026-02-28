@@ -27,8 +27,8 @@ public class Example4
         obj.printNumbers(1, 2, 3, 4, 5);
 
         // Abstract method via subclass
-        Shape shape = new Circle();
-        shape.draw();
+        Form form = new Circle();
+        form.draw();
     }
 
     // Varargs method
@@ -44,12 +44,12 @@ public class Example4
 
 
 // Abstract class with abstract method
-abstract class Shape
+abstract class Form
 {
     public abstract void draw(); // abstract method (no body)
 }
 
-class Circle extends Shape
+class Circle extends Form
 {
     @Override
     public void draw()

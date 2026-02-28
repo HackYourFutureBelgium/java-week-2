@@ -2,14 +2,14 @@ package classes.examples.polymorphism;
 
 public class BadExampleWithoutPolymorphism {
 
-    static void paint(Object shape) {       //?
-        if (shape == null) {
-            System.out.println("Shape is null, it's better to stop the program rather than to crash");
+    static void paint(Object figure) {
+        if (figure == null) {
+            System.out.println("Figure is null, it's better to stop the program rather than to crash");
         }
-        if(shape instanceof Triangle) {
+        if(figure instanceof Triangle) {
             System.out.println("Drawing a triangle");
         }
-        else if(shape instanceof Cylinder) {
+        else if(figure instanceof Cylinder) {
             System.out.println("Drawing a cylinder");
         }
         //......
@@ -24,22 +24,22 @@ public class BadExampleWithoutPolymorphism {
          * Why it doesn't follow the open closed principle?
          * hint if you don't know: if you cannot see why it is bad,
          *              try to add more shapes like Cone or Cylinder
-         * Student TODO: refactor this code so it follows OCP and polymorphism
-         * Student TODO: add a new Shape subclass (Hexagon, Cone, Cube etc.)
+         * Student work: refactor this code so it follows OCP and polymorphism
+         * Student work: add a new Figure subclass (Hexagon, Cone, Cube etc.)
          */
     }
 
     public static void main(String[] args) {
 
-        Shape[] shapeArray = new Shape[5];
-        shapeArray[0] = new Triangle();
-        shapeArray[1] = new Triangle();
-        shapeArray[2] = new Cylinder();
-        shapeArray[3] = new Oval();
-        shapeArray[4] = new Oval();
-        shapeArray[5] = new Rectangle();
+        Figure[] figureArray = new Figure[5];
+        figureArray[0] = new Triangle();
+        figureArray[1] = new Triangle();
+        figureArray[2] = new Cylinder();
+        figureArray[3] = new Oval();
+        figureArray[4] = new Oval();
+        figureArray[5] = new Rectangle();
 
-        for(Shape obj: shapeArray) {
+        for(Figure obj: figureArray) {
             paint(obj);
         }
 

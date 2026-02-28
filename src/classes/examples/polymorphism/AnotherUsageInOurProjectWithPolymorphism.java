@@ -2,24 +2,24 @@ package classes.examples.polymorphism;
 
 public class AnotherUsageInOurProjectWithPolymorphism {
 
-    static void paint(Shape shape)
+    static void paint(Figure figure)
     {
-        if (shape != null) {
-            shape.draw();
+        if (figure != null) {
+            figure.draw();
         }
 
 
     }
 
     public static void main(String[] args) {
-        Shape[] shapeArray = new Shape[5];
-        shapeArray[0] = new Triangle();
-        shapeArray[1] = new Triangle();
-        shapeArray[2] = new Cylinder();
-        shapeArray[3] = new Oval();
-        shapeArray[4] = new Oval();
+        Figure[] figureArray = new Figure[5];
+        figureArray[0] = new Triangle();
+        figureArray[1] = new Triangle();
+        figureArray[2] = new Cylinder();
+        figureArray[3] = new Oval();
+        figureArray[4] = new Oval();
 
-        for(Shape obj: shapeArray) {
+        for(Figure obj: figureArray) {
             paint(obj);
         }
 

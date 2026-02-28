@@ -1,4 +1,4 @@
-This repository is initially imported from Hack Your Future teacher https://github.com/sammou00.
+This repository is initially imported from Hack Your Future teacher https://github.com/sammou00 and then modified.
 
 # Week 2: Methods, Array & Intro to OOP
 
