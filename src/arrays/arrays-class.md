@@ -160,6 +160,57 @@ System.out.println(Arrays.deepToString(arr)); // [[1, 2], [3, 4]]
 
 ## 7. Hash Code Methods
 
+### What is a Hash?
+
+A **hash** is a fixed-size numeric fingerprint generated from any input data by a **hash function**.
+No matter how large or small the input is, the output (the hash) is always the same length.
+
+Key properties:
+- **Deterministic** — the same input always produces the same hash.
+- **One-way** — it is computationally infeasible to reverse a hash back to the original input. We cannot recover the original data from the hash alone.
+- **Avalanche effect** — a tiny change in input produces a completely different hash.
+- **Collision-resistant** — two different inputs should not produce the same hash (though mathematically it can happen, well-designed algorithms make it extremely rare).
+
+### Two Famous Hash Algorithms
+
+| Algorithm | Output Size | Common Use |
+|-----------|------------|------------|
+| **SHA-256** (Secure Hash Algorithm) | 256 bits / 64 hex chars | File integrity, TLS, Bitcoin |
+| **MD5** (Message Digest 5) | 128 bits / 32 hex chars | Legacy checksums *(no longer considered secure for cryptographic use)* |
+
+### Verifying File Integrity with PowerShell
+
+When we download a file from the internet, the publisher often provides its expected hash.
+We can verify the downloaded file has not been tampered with (or corrupted) by comparing
+the published hash against the hash we compute ourselves:
+
+```powershell
+Get-FileHash .\downloaded-file.zip -Algorithm SHA256
+```
+
+Output example:
+```
+Algorithm  Hash                                                              Path
+---------  ----                                                              ----
+SHA256     3B4C...F9A1                                                       .\downloaded-file.zip
+```
+
+If the hash we get matches the hash published on the download page, the file is intact and trustworthy.
+If they differ even by a single character, the file must not be used — it may have been corrupted or replaced by a malicious version.
+
+> **Note for later:** When we work on security features, we will never store a user's plain-text password in the database.
+> Instead, we will hash the password (using a slow, salted algorithm like **BCrypt**) and store only the hash.
+> When the user logs in, we hash the entered password and compare the two hashes — because of the one-way nature of hashing,
+> there is no way to "decrypt" a stored hash back to the original password, which keeps users safe even if the database is leaked.
+
+---
+
+### `hashCode()` in Java
+
+The `Arrays.hashCode()` method computes an integer hash code for an array based on its contents.
+This is used internally by collections (e.g., `HashMap`, `HashSet`) to quickly locate objects.
+Note that Java's `hashCode()` is **not** a cryptographic hash — it is optimised for speed and bucket distribution, not security.
+
 ### `hashCode()`
 
 * Returns **hash code** for single-dimensional array.

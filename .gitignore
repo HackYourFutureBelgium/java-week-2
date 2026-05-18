@@ -30,6 +30,7 @@ bin/
 *.iws
 out/
 .idea
+.iml
 
 # NetBeans
 nbproject/private/
