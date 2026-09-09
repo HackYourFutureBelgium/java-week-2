@@ -115,9 +115,13 @@ public class Main
 
 ### 2.3 Polymorphism
 
-**Polymorphism** means **many forms**. In Java, it occurs in two types:
+**Polymorphism** means **many forms**. It means that Java can use the same
+method name in different situations and choose the appropriate behavior.
 
-1. **Compile-time (Method Overloading)**: Same method name, different parameters.
+In Java, it occurs in two common types:
+
+1. **Compile-time polymorphism (Method Overloading)**: Same method name,
+   different parameter lists.
 
 ```java
 class Calculator 
@@ -133,7 +137,20 @@ class Calculator
 }
 ```
 
-2. **Runtime (Method Overriding)**: Subclass provides its own implementation.
+This is polymorphism because the same method name, `add`, has different forms:
+
+```java
+Calculator calculator = new Calculator();
+
+calculator.add(2, 3);       // Java uses add(int, int)
+calculator.add(2.5, 3.5);   // Java uses add(double, double)
+```
+
+Java chooses the correct form from the arguments, before the program runs.
+That is why it is called **compile-time polymorphism**.
+
+2. **Runtime polymorphism (Method Overriding)**: A subclass provides its own
+    implementation of a method inherited from its parent class.
 
 ```java
 class Animal 
@@ -156,11 +173,16 @@ public class Main
 {
     public static void main(String[] args) 
     {
-        Animal myDog = new Dog();
-        myDog.sound(); // Dog barks
+        Animal animal = new Dog();
+        animal.sound(); // Dog barks
     }
 }
 ```
+
+Here, the variable type is `Animal`, but the actual object is a `Dog`.
+Java waits until the program runs to choose the correct `sound()` method.
+Because the object is a `Dog`, it calls `Dog`'s version. This is called
+**runtime polymorphism**.
 
 ---
 
@@ -227,7 +249,59 @@ class Person
 ### 3.3 `this` and `super` Keywords
 
 * `this` → Refers to **current object**.
-* `super` → Refers to **parent class**.
+* `super` → Refers to the **parent class object**. Use it to access a parent
+  class field or method when a child class has a member with the same name.
+* `super()` → Calls the constructor of the parent class. It must be the first
+  statement in a child class constructor.
+
+### `super` Example
+
+```java
+class Vehicle
+{
+    String type = "vehicle";
+}
+
+class Bike extends Vehicle
+{
+    String type = "bike";
+
+    void printTypes()
+    {
+        System.out.println(type);       // bike: field in Bike
+        System.out.println(super.type); // vehicle: field in Vehicle
+    }
+}
+```
+
+### `super()` Example
+
+```java
+class Vehicle
+{
+    String brand;
+
+    Vehicle(String brand)
+    {
+        this.brand = brand;
+    }
+}
+
+class Bike extends Vehicle
+{
+    int numberOfWheels;
+
+    Bike(String brand, int numberOfWheels)
+    {
+        super(brand); // Calls Vehicle's constructor first.
+        this.numberOfWheels = numberOfWheels;
+    }
+}
+```
+
+In this example, `super(brand)` gives the `brand` value to the `Vehicle`
+constructor. If the parent class has a constructor with parameters, the child
+class must call a matching parent constructor with `super(...)`.
 
 ---
 
