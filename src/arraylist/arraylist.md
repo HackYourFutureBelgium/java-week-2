@@ -12,7 +12,14 @@ It belongs to the `java.util` package and implements the **List interface**.
 ---
 
 ## 2. Declaration and Initialization
-//TODO: write about Arrays.asList and List.of
+### `Arrays.asList` and `List.of`
+
+`Arrays.asList` creates a **fixed-size list backed by an array**. You can update
+existing elements, but you cannot add or remove elements.
+
+`List.of` creates an **immutable list**. Its elements cannot be changed, and it
+does not allow `null` values.
+
 ```java
 import java.util.ArrayList;
 
