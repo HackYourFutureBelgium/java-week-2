@@ -22,6 +22,8 @@ does not allow `null` values.
 
 ```java
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 // Generic ArrayList of integers
 ArrayList<Integer> numbers = new ArrayList<>();
@@ -32,14 +34,13 @@ ArrayList<String> names = new ArrayList<>(20);
 // Raw type (not recommended)
 ArrayList list = new ArrayList();
 
-// immutable list
-var numbers = java.util.List.of(1, 2, 3);
+// Immutable list
+List<Integer> immutableNumbers = List.of(1, 2, 3);
 
-// `asList(T... a)` → Convert **array to List**
-// check arrays-class title 10
+// `asList(T... a)` → Convert an array to a fixed-size list
 String[] arr = {"A", "B", "C"};
 List<String> list = Arrays.asList(arr);
-````
+```
 
 ---
 
@@ -86,8 +87,9 @@ set(int index, E e)   // Replaces element at index
 Example:
 
 ```java
-list.set(1, "Z");   // ["A", "Z", "B"]
+list.set(1, "Z");   // ["A", "Z", "C"]
 ```
+This method replaces the element currently stored at the given index.
 
 ---
 
@@ -165,14 +167,18 @@ for (String item : list)
 ### 🔹 3.8 Conversion
 
 ```java
-toArray()   // Converts ArrayList to array
+toArray()   // Converts ArrayList to an array
 ```
+
+The `toArray()` method converts an `ArrayList` into a normal array. If you call `toArray()` without arguments, it returns an `Object[]`. To get a strongly typed array such as `String[]`, pass a correctly typed array as a parameter.
 
 Example:
 
 ```java
 String[] arr = list.toArray(new String[0]);
+// Creates a new String[] and copies the list elements into it
 ```
+This avoids the need for manual casting and keeps the array type safe.
 
 ---
 
