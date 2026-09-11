@@ -27,6 +27,8 @@ public class Example3InheritanceIntroduction
 // Superclass
 class Animal
 {
+    int age;
+    boolean isVertebrate;
     void eat()
     {
         System.out.println("Animal is eating");
@@ -36,6 +38,14 @@ class Animal
 // Subclass
 class Dog extends Animal            // Dog IS-A Animal
 {
+    int teethCount;
+    public Dog() {
+        //if parent class has a constructor, we must call it first
+        this.teethCount = 30;
+        super.age = 8;
+        //super.age is same as this.age here
+    }
+
     void bark()
     {
         System.out.println("Dog is barking");
