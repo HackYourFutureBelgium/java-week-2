@@ -16,7 +16,7 @@ and an introduction to **classes and objects**.
 
 ## 📝 Project Ideas
 
-### 1. ➕ Advance Calculator
+### 1.  Advanced Calculator
 **Concepts used:** Methods, parameters, return types.
 - Create separate methods for addition, subtraction, multiplication, division , and modulus.
 - Make it works for integers and doubles separately (method overloading).
@@ -31,7 +31,7 @@ public static double add(double a, double b) { return a + b; }
 
 ---
 
-### 2. 📊 Array Statistics
+### 2.  Array Statistics
 
 **Concepts used:** Arrays, loops, methods.
 
@@ -46,7 +46,7 @@ public static double add(double a, double b) { return a + b; }
 
 ---
 
-### 3. 🏀 2D Array Scoreboard
+### 3.  2D Array Scoreboard
 
 **Concepts used:** Multidimensional arrays, nested loops.
 
@@ -57,7 +57,7 @@ public static double add(double a, double b) { return a + b; }
 
 ---
 
-### 4. 📖 Book Information (Intro to Classes)
+### 4.  Book Information (Intro to Classes)
 
 **Concepts used:** Classes, objects, fields, methods, constructors.
 
@@ -68,7 +68,7 @@ public static double add(double a, double b) { return a + b; }
 
 ---
 
-### 5. 🏫 Student Report (Arrays + Objects)
+### 5.  Student Report (Arrays + Objects)
 
 **Concepts used:** Arrays of objects, loops, classes.
 
@@ -80,7 +80,7 @@ public static double add(double a, double b) { return a + b; }
 
 ---
 
-### 6. 🎲 Dice Roller with Methods
+### 6.  Dice Roller with Methods
 
 **Concepts used:** Methods, random numbers, loops.
 
@@ -89,7 +89,7 @@ public static double add(double a, double b) { return a + b; }
 * Call `rollDice()` that many times and print the results.
 
 ---
-### 7. 🔢 Prime Number Checker
+### 7.  Prime Number Checker
 
 **Concepts used:** Methods, loops, conditionals.
 
@@ -100,7 +100,7 @@ public static double add(double a, double b) { return a + b; }
 
 ---
 
-### 8. 🛒 Shopping Cart (Array of Objects)
+### 8.  Shopping Cart (Array of Objects)
 
 **Concepts used:** Classes, objects, arrays, methods.
 
@@ -111,7 +111,7 @@ public static double add(double a, double b) { return a + b; }
 
 ---
 
-### 9. 🔠 String Utilities
+### 9.  String Utilities
 
 **Concepts used:** Methods, arrays (of characters), loops.
 
@@ -124,7 +124,7 @@ public static double add(double a, double b) { return a + b; }
 
 ---
 
-## 🚀 Learning Goals
+##  Learning Goals
 
 By the end of Week 2, you should be able to:
 
@@ -132,7 +132,4 @@ By the end of Week 2, you should be able to:
 * Handle **arrays** and **multidimensional arrays** effectively.
 * Understand the basics of **classes and objects**.
 * Combine arrays, loops, and objects in small projects.
-
-
-
 
