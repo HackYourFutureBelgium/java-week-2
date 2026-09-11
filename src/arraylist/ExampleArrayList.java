@@ -6,16 +6,7 @@ public class ExampleArrayList {
 
     public static void main(String[] args) {
 
-        System.out.println(Integer.toBinaryString(0));
-        System.out.println(Integer.toBinaryString(1));
-        System.out.println(Integer.toBinaryString(2));
 
-
-        //HEX: 0123456789abcdef
-
-
-        Integer i = 10;                     // autoboxing
-        Integer j = new Integer(20);       // unboxing
 
 
         char c = ';';
@@ -30,7 +21,7 @@ public class ExampleArrayList {
 //        System.out.println(myDefault);
         System.out.println(myWrapperBoolean);
 
-        ArrayList<String> list = new ArrayList<>(1);
+        ArrayList<String> list = new ArrayList<>(1);        //polymorphic definition
         System.out.println("list.isEmpty(): " + list.isEmpty());
         list.add("A");                // ["A"]
         System.out.println(" after adding something, list.isEmpty(): " + list.isEmpty());
