@@ -9,6 +9,10 @@ package methods.examples;
 
 public class Example2
 {
+    protected int myProtectedInteger = 0;
+    public String publicField;
+    Character defaultField;
+
     // Main method
     public static void main(String[] args)
     {
@@ -25,7 +29,8 @@ public class Example2
         System.out.println("Public method called");
     }
 
-    // Protected method -> accessible within package & subclasses
+    // Protected method ->
+    //   ->   accessible within same package or subclasses on any package
     protected void protectedMethod()
     {
         System.out.println("Protected method called");

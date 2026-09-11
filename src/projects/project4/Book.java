@@ -30,7 +30,7 @@ public class Book {
         }
         else if (title == null) {
             System.out.println("Null value has been passed to title");
-            title = "Default title";
+            this.title = "Default title";
         }
         else {
             this.title = title;
@@ -40,4 +40,16 @@ public class Book {
     public String getTitle() {
         return this.title;
     }
+
+    public Integer getYear() {
+        return year;
+    }
+
+    public void setYear(Integer year) {
+        if(year < -1000) {
+            System.out.println("Hey! writing is not invented yet!");
+        }
+        this.year = year;
+    }
+
 }

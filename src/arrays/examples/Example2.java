@@ -19,6 +19,15 @@ public class Example2
         System.out.println(matrix[1][1]);
         System.out.println(matrix[1][2]);
 
+        for(int line = 0; line < 3; line++) {
+            for (int column = 0; column < 3; column++) {
+
+                System.out.print(matrix[line][column] + " ");
+
+            }
+            System.out.println();
+        }
+
 
         int[][] chessBoard = new int[8][8];
 
